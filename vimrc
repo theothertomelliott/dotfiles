@@ -1,6 +1,8 @@
 :so ~/dotfiles/vim/plugins.vim
 colorscheme molokai
 
+let g:molokai_original = 1
+
 set nocompatible              " be iMproved, required
 filetype on                  " required
 
@@ -35,6 +37,14 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+" Requires jq: https://stedolan.github.io/jq/
+com! FormatJSON %!jq '.'
+
+let g:vim_json_syntax_conceal = 0
+
+set completeopt-=preview
+let g:neocomplete#enable_at_startup = 1
 
 " Toggle NERDTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>

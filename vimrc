@@ -44,6 +44,8 @@ com! FormatJSON %!jq '.'
 let g:vim_json_syntax_conceal = 0
 
 set completeopt-=preview
+" Autoenable neocomplete: https://github.com/Shougo/neocomplete.vim
+" Requires vim with lua: brew install vim --with-lua
 let g:neocomplete#enable_at_startup = 1
 
 " Toggle NERDTree with Ctrl+n

@@ -3,6 +3,9 @@ colorscheme molokai
 
 let g:molokai_original = 1
 
+" Automatically save buffers on running make
+set autowrite
+
 set nocompatible              " be iMproved, required
 filetype on                  " required
 
@@ -26,10 +29,17 @@ let g:statline_show_encoding = 0
 " vim-go settings
 let g:go_fmt_command = "goimports"
 
+au FileType go nmap <Leader>b :call GoSyntaxCheck()<CR>
+au FileType go nmap <Leader>r <Plug>(go-run)
+au FileType go nmap <Leader>t <Plug>(go-test)
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>c <Plug>(go-coverage)
 au FileType go nmap <Leader>cc <Plug>(go-callers)
 au FileType go nmap <Leader>ii <Plug>(go-info)
 au FileType go nmap <Leader>df <Plug>(go-def)
 au FileType go nmap <Leader>ds <Plug>(go-def-vertical)
+au FileType go nmap <Leader>de <Plug>(go-def-tab)
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -37,6 +47,10 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:syntastic_aggregate_errors = 1
 
 " Requires jq: https://stedolan.github.io/jq/
 com! FormatJSON %!jq '.'
@@ -47,6 +61,15 @@ set completeopt-=preview
 " Autoenable neocomplete: https://github.com/Shougo/neocomplete.vim
 " Requires vim with lua: brew install vim --with-lua
 let g:neocomplete#enable_at_startup = 1
+
+function! GoSyntaxCheck()
+	if (match(expand("%"), "test") != -1)
+		:GoTestCompile
+	else
+	        :GoBuild
+	endif
+endfunction
+
 
 " Toggle NERDTree with Ctrl+n
 map <C-n> :NERDTreeToggle<CR>

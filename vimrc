@@ -18,7 +18,7 @@ syntax on
 filetype plugin indent on
 
 " Tagbar settings
-nmap <F8> :TagbarToggle<CR>
+nmap <Leader>p :TagbarToggle<CR>
 
 " vim-statline settings
 let g:statline_fugitive = 1
@@ -48,8 +48,7 @@ let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
-let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:syntastic_go_checkers = ['govet', 'errcheck', 'go']
 let g:syntastic_aggregate_errors = 1
 
 " Requires jq: https://stedolan.github.io/jq/

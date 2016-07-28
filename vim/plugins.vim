@@ -20,7 +20,6 @@ Plugin 'fatih/molokai'
 Plugin 'majutsushi/tagbar'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Quramy/vison'
-Plugin 'Shougo/unite.vim'
 Plugin 'elzr/vim-json'
 Plugin 'Shougo/neocomplete.vim'
 " All of your Plugins must be added before the following line

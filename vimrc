@@ -69,12 +69,7 @@ function! GoSyntaxCheck()
 	endif
 endfunction
 
+let g:netrw_liststyle=3
 
-" Toggle NERDTree with Ctrl+n
-map <C-n> :NERDTreeToggle<CR>
-" Something else for NERDTree (lookup what it does)
-autocmd StdinReadPre * let s:std_in=1
 " Automatically open NERDTree if launched without a buffer
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" Automatically close Vim if NERDTree is the only open tab
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | Explore | endif

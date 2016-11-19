@@ -3,3 +3,5 @@ storage
 themes
 packages
 compile-cache
+.apm
+blob-store

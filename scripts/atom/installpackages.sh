@@ -9,6 +9,7 @@ apm install godoc@1.1.1
 apm install gofmt@1.2.0
 apm install gometalinter-linter@1.2.2
 apm install gorename@1.1.0
+apm install language-soy@0.3.2
 apm install linter@1.11.18
 apm install navigator-go@1.1.3
 apm install platformio-ide-terminal@2.2.2

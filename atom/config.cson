@@ -5,5 +5,7 @@
     userId: "bf0bc36c-011e-7316-6244-5c1b205aeb34"
   "go-plus":
     panelDisplayMode: "closed"
+  linter:
+    showErrorPanel: false
   welcome:
     showOnStartup: false

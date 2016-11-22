@@ -7,5 +7,7 @@
     panelDisplayMode: "closed"
   linter:
     showErrorPanel: false
+  "tester-go":
+    coverageHighlightMode: "covered-and-uncovered"
   welcome:
     showOnStartup: false

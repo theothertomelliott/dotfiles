@@ -4,8 +4,12 @@
   "exception-reporting":
     userId: "bf0bc36c-011e-7316-6244-5c1b205aeb34"
   "go-plus":
+    config: {}
     currentPanelHeight: "30.239583333333332vh"
+    lint: {}
     panelDisplayMode: "closed"
+    test:
+      coverageHighlightMode: "covered-and-uncovered"
   linter:
     showErrorPanel: false
   "tester-go":

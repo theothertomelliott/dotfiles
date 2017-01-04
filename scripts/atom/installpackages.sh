@@ -1,7 +1,8 @@
 #!/bin/bash
 apm install git-blame@0.4.11
-apm install go-debug@1.0.0
-apm install go-plus@5.0.2
+apm install go-debug@1.0.1
+apm install go-outline@0.6.2
+apm install go-plus@5.0.9
 apm install go-signature-statusbar@1.2.0
 apm install hyperclick@0.0.39
 apm install jekyll@1.4.3

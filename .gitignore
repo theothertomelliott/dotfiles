@@ -1,4 +1,5 @@
 .node-gyp
+thirdparty
 storage
 themes
 packages

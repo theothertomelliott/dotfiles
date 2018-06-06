@@ -1,2 +1,0 @@
-'.platform-darwin atom-text-editor[data-grammar~="go"]:not([mini])':
-  'cmd-d': 'golang:godef'
